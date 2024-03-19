@@ -1,0 +1,54 @@
+apiVersion: kubevirt.io/v1
+kind: VirtualMachine
+metadata:
+  labels:
+    app: base-vm 
+  name: base-vm
+spec:    
+    running: true
+    template:
+      metadata:
+        labels:
+          kubevirt.io/domain: base-vm
+      spec:
+        domain:
+          cpu:
+            cores: 1
+            sockets: 2
+            threads: 1
+          devices:
+            disks:
+            - disk:
+                bus: virtio
+              name: rootdisk
+            - disk:
+                bus: virtio
+              name: cloudinitdisk
+            interfaces:
+            - masquerade: {}
+              name: default
+            rng: {}
+          features:
+            smm:
+              enabled: true
+          firmware:
+            bootloader:
+              efi: {}
+          resources:
+            requests:
+              memory: 2Gi
+        evictionStrategy: LiveMigrate
+        networks:
+        - name: default
+          pod: {}
+        volumes:
+        - persistentVolumeClaim:
+              claimName: base-vm-disk
+          name: rootdisk
+        - cloudInitNoCloud:
+            userData: |-
+              #cloud-config
+              user: cloud-user
+              password: 'redhat1234' 
+              chpasswd: { expire: False }
+          name: cloudinitdisk
