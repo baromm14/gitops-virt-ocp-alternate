@@ -1,0 +1,4 @@
+resources:
+- base-vm-disk.yaml
+- base-vm-import-source.yaml
+- base-vm.yaml
