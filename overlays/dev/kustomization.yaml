@@ -1,6 +1,6 @@
 resources:
   - ../../base
-
+  - base-vm.yaml
 patches:
 - patch: |-
     - op: replace
