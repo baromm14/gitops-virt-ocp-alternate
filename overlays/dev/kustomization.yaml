@@ -8,34 +8,34 @@ patches:
       path: /metadata/labels/app
       value: new-rhel9-vm
   target:
-    name: dev-vm.yaml
+    name: base-vm.yaml
 - patch: |-
     - op: replace
       path: /metadata/name
       value: new-rhel9-vm
   target:
-    name: dev-vm.yaml
+    name: base-vm.yaml
 - patch: |-
     - op: replace
       path: spec/template/metadata/labels/kubevirt.io/domain
       value: new-rhel9-vm
   target:
-    name: dev-vm.yaml
+    name: base-vm.yaml
 - patch: |-
     - op: replace
       path: spec/template/spec/domain/devices/disks/name
       value: new-rhel9-vm-rootdisk
   target:
-    name: dev-vm.yaml
+    name: base-vm.yaml
 - patch: |-
     - op: replace
       path: spec/template/spec/domain/volumes/persistentVolumeClaim/claimName
       value: new-rhel9-vm-rootdisk
   target:
-    name: dev-vm.yaml
+    name: base-vm.yaml
 - patch: |-
     - op: replace
       path: spec/template/spec/domain/volumes/name
       value: new-rhel9-vm-rootdisk
   target:
-    name: dev-vm.yaml
+    name: base-vm.yaml
