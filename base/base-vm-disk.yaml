@@ -9,7 +9,7 @@ spec:
     kind: VolumeImportSource
     name: base-vm-import-source
   accessModes:
-    - ReadWriteMany
+    - ReadWriteOnce
   resources:
     requests:
       storage: 30Gi
