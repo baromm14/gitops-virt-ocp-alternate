@@ -15,13 +15,13 @@ patches:
 #  target:
 #    kind: VirtualMachine
 #    name: base-vm
-- patch: |-
-      - op: replace
-        path: spec/template/metadata/labels/kubevirt.io/domain
-        value: dev-rhel9-vm
-  target:
-    kind: VirtualMachine
-    name: base-vm
+#- patch: |-
+#      - op: replace
+#        path: spec/template/metadata/labels/kubevirt.io/domain
+#        value: dev-rhel9-vm
+#  target:
+#    kind: VirtualMachine
+#    name: base-vm
 #- patch: |-
 #      - op: replace
 #        path: spec/template/spec/domain/devices/disks/name
