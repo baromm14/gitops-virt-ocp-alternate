@@ -10,6 +10,7 @@ spec:
     name: base-vm-import-source
   accessModes:
     - ReadWriteMany
+  volumeMode: Block
   resources:
     requests:
       storage: 30Gi
