@@ -7,6 +7,6 @@ patches:
 resources:
 - ../../base
 
-images:
-- name: myapp
-  newTag: 1.0.0
+#images:
+#- name: myapp
+#  newTag: 1.0.0
