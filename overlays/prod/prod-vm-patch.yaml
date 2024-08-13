@@ -43,5 +43,5 @@ patches:
 #  target:
 #    kind: VirtualMachine
 #    name: base-vm
-resources:
-- ../../base
+# resources:
+# - ../../base
