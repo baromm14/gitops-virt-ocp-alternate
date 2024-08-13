@@ -1,5 +1,5 @@
-apiVersion: kubevirt.io/v1
-kind: VirtualMachine
+#apiVersion: kubevirt.io/v1
+#kind: VirtualMachine
 patches:
 - patch: |-
       - op: replace
