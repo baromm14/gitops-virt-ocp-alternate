@@ -3,24 +3,15 @@
 - op: replace
   path: /metadata/labels/app
   value: dev-rhel9-vm
-#- patch: |-
-#      - op: replace
-#        path: /metadata/name
-#        value: dev-rhel9-vm
-#  target:
-#    kind: VirtualMachine
-#    name: base-vm
-#- patch: |-
-#      - op: replace
-#        path: spec/template/metadata/labels/kubevirt.io/domain
-#        value: dev-rhel9-vm
-#  target:
-#    kind: VirtualMachine
-#    name: base-vm
-#- patch: |-
-#      - op: replace
-#        path: spec/template/spec/domain/devices/disks/name
-#        value: dev-rhel9-vm-rootdisk
+- op: replace
+  path: /metadata/name
+  value: dev-rhel9-vm
+- op: replace
+  path: spec/template/metadata/labels/kubevirt.io/domain
+  value: dev-rhel9-vm
+- op: replace
+  path: spec/template/spec/domain/devices/disks/name
+  value: dev-rhel9-vm-rootdisk
 #  target:
 #    kind: VirtualMachine
 #    name: base-vm
