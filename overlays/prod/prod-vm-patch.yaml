@@ -3,6 +3,10 @@
 - op: replace
   path: /metadata/labels/app
   value: dev-rhel9-vm
+
+- op: replace
+  path: spec/running
+  value: true
 #- patch: |-
 #      - op: replace
 #        path: /metadata/name
