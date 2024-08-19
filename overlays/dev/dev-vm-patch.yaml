@@ -1,15 +1,15 @@
 - op: replace
   path: /metadata/labels/app
-  value: prod-rhel9-vm
+  value: dev-rhel9-vm
 - op: replace
   path: /metadata/name
-  value: prod-rhel9-vm
+  value: dev-rhel9-vm
 - op: replace
   path: spec/template/metadata/labels/kubevirt.io/domain
-  value: prod-rhel9-vm
+  value: dev-rhel9-vm
 - op: replace
   path: spec/template/spec/domain/devices/disks/name
-  value: prod-rhel9-vm-rootdisk
+  value: dev-rhel9-vm-rootdisk
 #  target:
 #    kind: VirtualMachine
 #    name: base-vm
