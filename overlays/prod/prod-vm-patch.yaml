@@ -5,9 +5,6 @@ patches:
       - op: replace
         path: /metadata/labels/app
         value: dev-rhel9-vm
-  target:
-    kind: VirtualMachine
-    name: base-vm
 #- patch: |-
 #      - op: replace
 #        path: /metadata/name
