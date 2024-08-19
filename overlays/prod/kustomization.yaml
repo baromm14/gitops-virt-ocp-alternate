@@ -6,6 +6,7 @@ resources:
 
 patchesStrategicMerge:
 - prod-vm-patch.yaml
+
 #images:
 #- name: myapp
 #  newTag: 1.0.0
