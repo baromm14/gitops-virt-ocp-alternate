@@ -1,10 +1,8 @@
 #apiVersion: kubevirt.io/v1
 #kind: VirtualMachine
-patches:
-- patch: |-
-      - op: replace
-        path: /metadata/labels/app
-        value: dev-rhel9-vm
+- op: replace
+  path: /metadata/labels/app
+  value: dev-rhel9-vm
 #- patch: |-
 #      - op: replace
 #        path: /metadata/name
