@@ -5,7 +5,7 @@ metadata:
     app: base-vm 
   name: base-vm
 spec:    
-    running: true
+    running: false
     template:
       metadata:
         labels:
