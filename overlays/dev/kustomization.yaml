@@ -2,10 +2,14 @@ apiVersion: kustomize.config.k8s.io/v1beta1
 kind: Kustomization
 
 resources:
-- ../../base
+  - ../../base
+
+namePrefix: dev-
 
 patches:
-- target:
-    kind: VirtualMachine
-    name: base-vm
-  path: dev-vm-patch.yaml
+  - patch: |
+      - op: replace
+        path: /spec/template/spec/domain/memory/guest
+        value: 4096M
+    target:
+      kind: VirtualMachine
