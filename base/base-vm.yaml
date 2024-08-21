@@ -22,7 +22,7 @@ spec:
             disks:
             - disk:
                 bus: virtio
-              name: base-vm-rootdisk
+              name: vm-rootdisk
             - disk:
                 bus: virtio
               name: cloudinitdisk
@@ -46,7 +46,7 @@ spec:
         volumes:
         - persistentVolumeClaim:
               claimName: base-vm-disk
-          name: base-vm-rootdisk
+          name: vm-rootdisk
         - cloudInitNoCloud:
             userData: |-
               #cloud-config
