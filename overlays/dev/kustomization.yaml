@@ -11,6 +11,7 @@ patches:
       - op: replace
         path: /spec/template/spec/volumes/0/persistentVolumeClaim/claimName
         value: dev-base-vm-disk
+        create: true
       - op: replace
         path: /spec/template/spec/domain/memory/guest
         value: 4096M
