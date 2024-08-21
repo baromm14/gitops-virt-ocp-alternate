@@ -16,6 +16,8 @@ spec:
             cores: 1
             sockets: 2
             threads: 1
+          memory:
+            guest: 2048
           devices:
             disks:
             - disk:
