@@ -17,7 +17,7 @@ spec:
             sockets: 2
             threads: 1
           memory:
-            guest: 2048
+            guest: 2Gi
           devices:
             disks:
             - disk:
