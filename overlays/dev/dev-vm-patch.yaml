@@ -14,6 +14,3 @@ patches:
 - op: replace
   path: spec/template/spec/domain/devices/disks/name
   value: dev-rhel9-vm-rootdisk
-- op: replace
-  path: spec/running
-  value: true
