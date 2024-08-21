@@ -4,9 +4,16 @@ kind: Kustomization
 resources:
 - ../../base
 
-patchesStrategicMerge:
-- prod-vm-patch.yaml
+namePrefix: prod-
 
-#images:
-#- name: myapp
-#  newTag: 1.0.0
+patches:
+  - patch: |
+      - op: replace
+        path: /spec/template/spec/domain/memory/guest
+        value: 8192M
+    target:
+      kind: VirtualMachine
+
+        #images:
+        #- name: myapp
+        # newTag: 1.0.0
