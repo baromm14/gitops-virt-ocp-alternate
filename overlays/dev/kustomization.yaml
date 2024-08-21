@@ -15,7 +15,7 @@ patches:
         path: /spec/template/spec/domain/memory/guest
         value: 4096M
       - op: replace
-        path: spec/running
+        path: /spec/running
         value: true
     target:
       kind: VirtualMachine
