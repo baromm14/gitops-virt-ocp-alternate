@@ -9,7 +9,7 @@ namePrefix: dev-
 patches:
   - patch: |
       - op: replace
-        path: /spec/template/spec/volumes/persistentVolumeClaim/0/claimName
+        path: /spec/template/spec/volumes/0/persistentVolumeClaim/claimName
         value: dev-base-vm-disk
       - op: replace
         path: /spec/template/spec/domain/memory/guest
