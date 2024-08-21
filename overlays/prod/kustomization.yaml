@@ -11,6 +11,9 @@ patches:
       - op: replace
         path: /spec/template/spec/domain/memory/guest
         value: 8192M
+      - op: replace
+        path: /spec/template/spec/volumes/persistentVolumeClaim/0/claimName
+        value: prod-base-vm-disk
     target:
       kind: VirtualMachine
 
