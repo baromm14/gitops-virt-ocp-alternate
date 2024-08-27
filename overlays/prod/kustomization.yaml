@@ -6,17 +6,10 @@ resources:
 
 namePrefix: prod-
 
+configurations:
+  - config.yaml
+
 patches:
-  - patch: |
-      - op: replace
-        path: /spec/template/spec/domain/memory/guest
-        value: 8192M
-      - op: replace
-        path: /spec/template/spec/volumes/0/persistentVolumeClaim/claimName
-        value: prod-base-vm-disk
+  - path: prod-vm-patch.yaml
     target:
       kind: VirtualMachine
-
-        #images:
-        #- name: myapp
-        # newTag: 1.0.0
