@@ -6,7 +6,7 @@ metadata:
   name: base-vm
   namespace: beehive-virtual-machines
 spec:    
-    running: true
+    running: false
     template:
       metadata:
         labels:
