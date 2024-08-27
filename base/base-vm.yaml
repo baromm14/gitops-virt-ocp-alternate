@@ -4,6 +4,7 @@ metadata:
   labels:
     app: base-vm 
   name: base-vm
+  namespace: beehive-virtual-machines
 spec:    
     running: true
     template:
