@@ -7,6 +7,8 @@ nameReference:
     path: spec/template/spec/volumes/persistentVolumeClaim/claimName 
 
 # Change labels based on VM name WITH prefix
+# See here for more infomation: https://github.com/kubernetes-sigs/kustomize/tree/master/examples/transformerconfigs#supporting-escape-characters-in-crd-path
+# Examples here: https://github.com/kubernetes-sigs/kustomize/tree/master/examples/transformerconfigs#builtin-namereference
 - kind: VirtualMachine
   version: v1
   fieldSpecs:
