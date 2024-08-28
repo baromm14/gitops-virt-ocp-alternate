@@ -6,16 +6,10 @@ resources:
 
 namePrefix: dev-
 
+configurations:
+  - config.yaml
+
 patches:
-  - patch: |
-      - op: replace
-        path: /spec/template/spec/volumes/0/persistentVolumeClaim/claimName
-        value: dev-base-vm-disk
-      - op: replace
-        path: /spec/template/spec/domain/memory/guest
-        value: 4096M
-      - op: replace
-        path: /spec/running
-        value: true
+  - path: dev-vm-patch.yaml 
     target:
       kind: VirtualMachine

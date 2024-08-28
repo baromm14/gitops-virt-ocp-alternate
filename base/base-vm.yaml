@@ -4,6 +4,7 @@ metadata:
   labels:
     app: base-vm 
   name: base-vm
+  namespace: beehive-virtual-machines
 spec:    
     running: false
     template:
@@ -17,7 +18,7 @@ spec:
             sockets: 2
             threads: 1
           memory:
-            guest: 2Gi
+            guest: 2048M
           devices:
             disks:
             - disk:
