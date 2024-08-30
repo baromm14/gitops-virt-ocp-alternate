@@ -3,4 +3,4 @@
   value: 4096M
 - op: replace
   path: /spec/running
-  value: false
+  value: true
